@@ -13,6 +13,7 @@ function AddForm(props) {
             onChange={(e) => {
               setTitle(e.target.value);
             }}
+            maxLength={50}
           />
           <button type="submit" className="px-4 bg-blue-500 rounded-r-[5px] text-white font-bold cursor-pointer box-border h-[40px] text-sm leading-none">
             {editId ? "update" : "add"}

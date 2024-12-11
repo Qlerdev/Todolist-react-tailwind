@@ -1,3 +1,136 @@
-.App {
-  min-height: 100vh;
+.App.dark {
+  background-color: #1e1e1e; /* สีพื้นหลังสำหรับ dark theme */
+  color: white; /* สีข้อความ */
+  font-family: "Arial", sans-serif; /* ตัวอย่างการปรับฟ้อนต์ */
+  font-size: 16px; /* ตัวอย่างการปรับขนาดฟ้อนต์ */
+  transition: all 500ms;
+}
+
+.App.dark input {
+  background-color: #333333; /* สีพื้นหลังของ input ใน dark mode */
+  color: white; /* สีข้อความของ input */
+  border: 1px solid #555555; /* กรอบ input */
+}
+
+.App.dark h1,
+.App.dark h2,
+.App.dark h3 {
+  color: #ffcc00; /* ตัวอย่างการปรับสีฟ้อนต์ของหัวข้อ */
+}
+
+.App.dark p {
+  color: #e0e0e0; /* ตัวอย่างการปรับสีฟ้อนต์ของย่อหน้า */
+  font-size: 14px; /* ตัวอย่างการปรับขนาดฟ้อนต์ของย่อหน้า */
+}
+
+.App.dark button {
+  background-color: #444444; /* พื้นหลังปุ่มในโหมด dark */
+  color: white; /* สีฟ้อนต์ของปุ่ม */
+  border: 1px solid #666666;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.App.dark button:hover {
+  background-color: #555555; /* สีปุ่มเมื่อ hover */
+}
+
+.App.light {
+  background-color: #ffffff; /* สีพื้นหลังสำหรับ light theme */
+  color: #000000; /* สีข้อความ */
+  font-family: "Arial", sans-serif; /* ตัวอย่างการปรับฟ้อนต์ */
+  font-size: 16px; /* ตัวอย่างการปรับขนาดฟ้อนต์ */
+  transition: all 500ms;
+}
+
+.App.light input {
+  background-color: #f9f9f9; /* สีพื้นหลังของ input ใน light mode */
+  color: #000000; /* สีข้อความของ input */
+  border: 1px solid #cccccc; /* กรอบ input */
+}
+
+.App.light h1,
+.App.light h2,
+.App.light h3 {
+  color: #333333; /* ตัวอย่างการปรับสีฟ้อนต์ของหัวข้อ */
+}
+
+.App.light p {
+  color: #555555; /* ตัวอย่างการปรับสีฟ้อนต์ของย่อหน้า */
+  font-size: 14px; /* ตัวอย่างการปรับขนาดฟ้อนต์ของย่อหน้า */
+}
+
+.App.light button {
+  background-color: #f0f0f0; /* พื้นหลังปุ่มในโหมด light */
+  color: #333333; /* สีฟ้อนต์ของปุ่ม */
+  border: 1px solid #dddddd;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.App.light button:hover {
+  background-color: #e0e0e0; /* สีปุ่มเมื่อ hover */
+}
+
+/* สำหรับข้อความ Task ใน Dark Mode */
+.App.dark .task-text {
+  color: white; /* สีข้อความใน Task */
+}
+
+.task-item {
+  display: flex;
+  align-items: center; /* จัดให้ปุ่มและข้อความอยู่ในแนวเดียวกัน */
+  justify-content: space-between; /* เพิ่มช่องว่างระหว่างข้อความและปุ่ม */
+  padding: 10px 0; /* เพิ่มระยะห่างระหว่าง Task */
+  border-bottom: 1px solid #e0e0e0; /* เส้นแบ่งแต่ละ Task */
+}
+
+.task-text {
+  flex: 1; /* ใช้พื้นที่ที่เหลือสำหรับข้อความ */
+  font-size: 16px; /* ปรับขนาดข้อความ */
+  word-wrap: break-word; /* รองรับข้อความยาว */
+}
+
+.task-buttons {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 3px;
+  background-color: gray; /* สีพื้นหลังเริ่มต้น */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 10px;
+}
+
+.task-buttons:hover {
+  background-color: #3b3b3b; /* สีพื้นหลังเมื่อ hover */
+  transform: scale(1.01); /* ขยายเล็กน้อยเมื่อ hover */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* เพิ่มเงา */
+}
+
+.task-text {
+  font-size: 16px;
+  color: #ffffff; /* สีของข้อความ */
+  flex: 1;
+}
+
+.task-buttons button {
+  margin-left: 10px;
+  padding: 6px 10px;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.task-buttons button:hover {
+  transform: scale(1.1); /* ขยายปุ่มเมื่อ hover */
+}
+
+.bg-yellow-500:hover {
+  background-color: #fbbf24; /* สีเหลืองที่สว่างขึ้นเมื่อ hover */
+}
+
+.bg-red-500:hover {
+  background-color: #f87171; /* สีแดงที่สว่างขึ้นเมื่อ hover */
 }

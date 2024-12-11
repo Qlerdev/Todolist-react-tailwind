@@ -1,18 +1,22 @@
 import { FaSun } from "react-icons/fa6";
 import { FaMoon } from "react-icons/fa";
-import { useState } from "react";
 
-function Header() {
-  const [show, setShow] = useState(true);
+function Header({ theme, setTheme }) {
+  function toggleTheme() {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  }
+
   return (
-    <header className=" bg-cyan-400	w-full min-h-[80px] shadow-lg font-bold flex justify-between items-center px-[50px]">
+    <header className=" w-full min-h-[80px] shadow-lg font-bold flex justify-between items-center px-[50px]">
       <div className="logo">
         <span className="text-[20px]">
-          <span className="text-white">Task</span> Management
+          <span>Task Management</span>
         </span>
       </div>
       <div className="theme-container">
-        <button onClick={() => setShow(!show)}>{show ? <FaSun className="text-[30px]" /> : <FaMoon className="text-[30px]" />}</button>
+        <button onClick={toggleTheme} className="text-white text-2xl">
+          {theme === "light" ? <FaMoon className="text-black" /> : <FaSun className="text-yellow-300" />}
+        </button>
       </div>
     </header>
   );
